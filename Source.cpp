@@ -38,7 +38,7 @@ string sentenceRecreator(string str, vector<string> dict)
 {
 
 
-	//string result = "";
+	
 	string answer = "";
 	int position = 0;//position in the original string
 	int length = 1;//length of substring
@@ -49,13 +49,9 @@ string sentenceRecreator(string str, vector<string> dict)
 		if (binary_search(dict.begin(), dict.end(), temp))
 		{
 			if (sentenceAfterCheck(dict, position, str, temp.length(), answer)) {
-				/*if (position == 0 || temp.length() == 1 && temp[0] == 'i') {
-					temp[0] = toupper(temp[0]);
-				}*/
+				
 				return answer.insert(0,temp+" ");
-				/*result += temp + " ";
-				position += temp.length();
-				length = 1;*/
+				
 			}
 			else {
 				length++;
@@ -65,7 +61,7 @@ string sentenceRecreator(string str, vector<string> dict)
 			length++;
 		}
 	}
-	//return result+"\b.";
+	
 
 }
 
